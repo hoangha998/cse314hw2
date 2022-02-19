@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>HW2 Doc</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  <link href="assets/_mkdocstrings.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> HW2 Doc</a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#extra-credits">(Extra credits)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#alcohol-consumption-dataset-ecdf">Alcohol Consumption Dataset (eCDF)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#apple-stock-dataset-chained-callback">Apple Stock Dataset (Chained callback)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#school-earnings-dataset">School Earnings Dataset</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="alcohol/">Alcohol Consumption Dataset</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="apple/">Apple Stock Dataset</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="school/">School Earnings Dataset</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">HW2 Doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="cse314-homework-2-documentation">CSE314 Homework 2 Documentation</h1>
+<p>This page lists the non-technical information about the datasets used in this project and answers required questions. For a list of callbacks for each dataset, refer to the corresponding tab on the navigation bar. </p>
+<h2 id="extra-credits">(Extra credits)</h2>
+<ul>
+<li>Each dataset has callbacks in a separate file in assignments/hw2</li>
+<li>Doc is uploaded to <a href="https://readthedocs.org/">readthedoc</a> and Github <a href="https://readthedocs.org/">link</a> can be found on the top right corner. </li>
+</ul>
+<h2 id="alcohol-consumption-dataset-ecdf">Alcohol Consumption Dataset (eCDF)</h2>
+<ul>
+<li>This dataset is about the rate of alcohol consumption among countries. </li>
+<li>This dataset is visualized using a eCDF chart.</li>
+<li>My visualization is interesting because using a combination of both an eCDF graph (which is better than histograms) and a checklist, the eCDF graph can be updated to contains only the countries being selected, making it easy to visualize and compare the rate of alcohol consumption among only the countries of interest. </li>
+<li>eCDF is preferrable to histograms because a histogram's structure depends on the number of bins. When changing the number of bins, a histogram generated from the same data can have different strucutres and distribution (this is called Binning Bias). For example, some number of bins may generate a histogram that is left-skewed while another may generate a histogram that is bell-shaped. Picking out the correct number of bins to optimally visualize your data and avoid Binning Bias can be tricky. Therefore, an eCDF is preferrable since it does not depend on the number of bins, so an eCDF's structure doesn't change when the number of bins change, and it is stil able to capture outliers (<a href="https://medium.com/convergeml/why-ecdf-is-better-than-a-histogram-85deda4129ed">source</a>). </li>
+</ul>
+<h2 id="apple-stock-dataset-chained-callback">Apple Stock Dataset (Chained callback)</h2>
+<ul>
+<li>This dataset contains the daily historical data of the AAPL ticker in 2014. </li>
+<li>This dataset is visualized using a line chart.</li>
+<li>My visualization is interesting because the best and easiest way (in my opinion) to visualize stock prices over a period of time is through a line chart. A line chart, combined with a date selector, makes it even more conveinet to analyze Apple's stock price in 2014 since you have the option to focus on the price of some specific period in 2014. </li>
+</ul>
+<h2 id="school-earnings-dataset">School Earnings Dataset</h2>
+<ul>
+<li>This dataset contains the average earnings of male and female employees in a set of universities in the U.S. </li>
+<li>This dataset is visualized using a barchart.</li>
+<li>My visualization is interesting because not only is barchart a very good way to compare the values of distinct classes, my barchart also has different colors for different genders for the same bar (representing a school). Looking at this graph, you can easily compare the total earnings among schools, as well as how much males earn more than females in a specific school or compared to other schools. </li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="alcohol/" class="btn btn-neutral float-right" title="Alcohol Consumption Dataset">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="alcohol/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.2.3
+Build Date UTC : 2022-02-19 00:04:45.987953+00:00
+-->

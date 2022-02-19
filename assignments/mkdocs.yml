@@ -1,0 +1,18 @@
+site_name: HW2 Doc
+nav:
+  - Home: index.md
+  - Alcohol Consumption Dataset: alcohol.md
+  - Apple Stock Dataset: apple.md
+  - School Earnings Dataset: school.md
+theme: readthedocs
+
+plugins:
+- mkdocstrings:
+    default_handler: python
+    handlers:
+      python:
+        rendering:
+          show_root_heading: false
+          show_source: true
+    custom_templates: templates
+

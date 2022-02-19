@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Apple Stock Dataset - HW2 Doc</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Apple Stock Dataset";
+    var mkdocs_page_input_path = "apple.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> HW2 Doc</a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../alcohol/">Alcohol Consumption Dataset</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Apple Stock Dataset</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#assignments.hw2.AppleCallbacks">assignments.hw2.AppleCallbacks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#assignments.hw2.AppleCallbacks.update_change_in_stock_price">update_change_in_stock_price()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#assignments.hw2.AppleCallbacks.update_date_range">update_date_range()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#assignments.hw2.AppleCallbacks.update_stock_direction">update_stock_direction()</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../school/">School Earnings Dataset</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">HW2 Doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Apple Stock Dataset</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="callbacks">Callbacks</h1>
+
+
+  <div class="doc doc-object doc-module">
+
+<a id="assignments.hw2.AppleCallbacks"></a>
+    <div class="doc doc-contents first">
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="assignments.hw2.AppleCallbacks.update_change_in_stock_price" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update_change_in_stock_price</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Display the change in Apple stock price from start_date to end_date</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>start_date</strong> (<code>str</code>) – start date in YYYY-MM-DD format</p></li>
+            <li><p><strong>end_date</strong> (<code>str</code>) – end date in YYYY-MM-DD format</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – A sentence informing the change in stock price </p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>assignments/hw2/AppleCallbacks.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
+    <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;change_in_price&#39;</span><span class="p">,</span> <span class="s1">&#39;children&#39;</span><span class="p">),</span>
+    <span class="n">Input</span><span class="p">(</span><span class="s1">&#39;date_range&#39;</span><span class="p">,</span><span class="s1">&#39;start_date&#39;</span><span class="p">),</span>
+    <span class="n">Input</span><span class="p">(</span><span class="s1">&#39;date_range&#39;</span><span class="p">,</span><span class="s1">&#39;end_date&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">update_change_in_stock_price</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span><span class="n">end_date</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Display the change in Apple stock price from start_date to end_date</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        start_date (str): start date in YYYY-MM-DD format</span>
+<span class="sd">        end_date (str): end date in YYYY-MM-DD format</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: A sentence informing the change in stock price </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">change</span> <span class="o">=</span> <span class="n">apple_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">end_date</span><span class="p">][</span><span class="s1">&#39;AAPL_y&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">apple_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">start_date</span><span class="p">][</span><span class="s1">&#39;AAPL_y&#39;</span><span class="p">]</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Stock price chance in this interval = </span><span class="si">%.2f</span><span class="s1"> dollars&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">change</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">text</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="assignments.hw2.AppleCallbacks.update_date_range" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update_date_range</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Update stock line chart to display data from start_date to end_date</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>start_date</strong> (<code>str</code>) – start date in YYYY-MM-DD format</p></li>
+            <li><p><strong>end_date</strong> (<code>str</code>) – end date in YYYY-MM-DD format</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>plotly.graph_objs._figure.Figure</code> – Line chart displaying Apple stock data in selected range</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>assignments/hw2/AppleCallbacks.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
+    <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;apple_graph&#39;</span><span class="p">,</span> <span class="n">component_property</span><span class="o">=</span><span class="s1">&#39;figure&#39;</span><span class="p">),</span>
+    <span class="n">Input</span><span class="p">(</span><span class="s1">&#39;date_range&#39;</span><span class="p">,</span><span class="s1">&#39;start_date&#39;</span><span class="p">),</span>
+    <span class="n">Input</span><span class="p">(</span><span class="s1">&#39;date_range&#39;</span><span class="p">,</span><span class="s1">&#39;end_date&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">update_date_range</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span><span class="n">end_date</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Update stock line chart to display data from start_date to end_date</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        start_date (str): start date in YYYY-MM-DD format</span>
+<span class="sd">        end_date (str): end date in YYYY-MM-DD format</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        plotly.graph_objs._figure.Figure: Line chart displaying Apple stock data in selected range</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">filtered_df</span> <span class="o">=</span> <span class="n">apple_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">start_date</span><span class="p">:</span><span class="n">end_date</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">px</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">filtered_df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">filtered_df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;AAPL_y&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Apple Stock Price in 2014&#39;</span><span class="p">,</span>
+            <span class="n">template</span><span class="o">=</span><span class="s1">&#39;plotly_dark&#39;</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;AAPL_x&#39;</span><span class="p">:</span> <span class="s1">&#39;dates&#39;</span><span class="p">,</span> <span class="s1">&#39;AAPL_y&#39;</span><span class="p">:</span> <span class="s1">&#39;dollars&#39;</span><span class="p">})</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="assignments.hw2.AppleCallbacks.update_stock_direction" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update_stock_direction</span><span class="p">(</span><span class="n">text</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Utilize chained callback so that whenever the date range is changed and the callback 
+update_change_in_stock_price is called, this callback would use the output from that callback
+and inform whether the Apple stock price in the selected range went up or down.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>text</strong> (<code>str</code>) – A sentence informing the change in stock price </p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – A sentence informing whether Apple stock price went up or down in the selected range</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>assignments/hw2/AppleCallbacks.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
+    <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;stock_direction&#39;</span><span class="p">,</span> <span class="s1">&#39;children&#39;</span><span class="p">),</span>
+    <span class="n">Input</span><span class="p">(</span><span class="s1">&#39;change_in_price&#39;</span><span class="p">,</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">update_stock_direction</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Utilize chained callback so that whenever the date range is changed and the callback </span>
+<span class="sd">    update_change_in_stock_price is called, this callback would use the output from that callback</span>
+<span class="sd">    and inform whether the Apple stock price in the selected range went up or down.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        text (str): A sentence informing the change in stock price </span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: A sentence informing whether Apple stock price went up or down in the selected range</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">change</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">change</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Stock price went DOWN in this interval&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;Stock price went UP in this interval&quot;</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../school/" class="btn btn-neutral float-right" title="School Earnings Dataset">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../alcohol/" class="btn btn-neutral" title="Alcohol Consumption Dataset"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../alcohol/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../school/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
